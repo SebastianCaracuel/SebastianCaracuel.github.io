@@ -3,91 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sebastián Caracuel | Profesional en Ciberseguridad e TI</title>
+    <title>Terminal de Seguridad // Portafolio Profesional</title>
+    <!-- Vinculación del archivo de estilos externo -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Sebastián Andrés Caracuel González</h1>
-        <p><strong>Ingeniero en Informática | Especialista en Ciberseguridad (Blue Team & Análisis de Seguridad)</strong></p>
-        <p>Ubicación: Puente Alto, Santiago, Chile | Enlaces: <a href="https://github.com/sebastianCaracuel">GitHub Profile</a></p>
-    </header>
-
-    <section id="sobre-mi">
-        <h2>Sobre Mí</h2>
-        <p>Ingeniero en Informática graduado de Duoc UC con formación especializada en seguridad defensiva (Blue Team) y operaciones de TI. Cuento con una base técnica sólida estructurada en fundamentos de sistemas operativos, análisis de seguridad, gestión de vulnerabilidades y mitigación de amenazas orientadas al cumplimiento de la tríada CIA (Confidencialidad, Integridad y Disponibilidad).</p>
-    </section>
-
-    <section id="educacion">
-        <h2>Educación y Certificaciones</h2>
-        <ul>
-            <li><strong>Ingeniería en Informática</strong> - Duoc UC (Graduado, 2024)</li>
-            <li><strong>Certificación: Fundamentos en Blue Team</strong> - Universidad de Santiago de Chile (USACH, Marzo 2025)</li>
-            <li><strong>Formación Continua y Plataformas Prácticas:</strong> Rutas de aprendizaje completadas en TryHackMe (Security Analyst), Hack The Box y 8.8 Academy.</li>
-        </ul>
-    </section>
-
-    <section id="habilidades">
-        <h2>Habilidades Técnicas</h2>
-        <div>
-            <span class="badge">Ciberseguridad Defensiva (Blue Team)</span>
-            <span class="badge">Análisis de Vulnerabilidades (SQL Injection)</span>
-            <span class="badge">Fundamentos de Sistemas Operativos</span>
-            <span class="badge">Arquitectura de Software</span>
-            <span class="badge">Tríada CIA</span>
-            <span class="badge">Consultoría TI</span>
-        </div>
-    </section>
-
-    <section id="experiencia">
-        <h2>Experiencia Profesional</h2>
-        
-        <div class="experience">
-            <h3>Consultor TI - SEIDOR</h3>
-            <p><em>2024 - Presente</em></p>
-            <p>Integración en la firma consultora tecnológica global, brindando soporte técnico, análisis de requerimientos organizacionales y aplicación de buenas prácticas de TI para optimizar la continuidad operativa y la infraestructura de los clientes.</p>
+    <div class="terminal-container">
+        <!-- BARRA SUPERIOR DE LA VENTANA -->
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+            </div>
+            <div class="terminal-title">bash — security_portfolio.sh</div>
+            <div></div>
         </div>
 
-        <div class="experience">
-            <h3>Supervisor de Monitores - Jumperpark</h3>
-            <p><em>2024</em></p>
-            <p>Responsable directo de la supervisión de personal técnico/operativo y de la inspección rigurosa de los sistemas de seguridad y equipamiento crítico de las instalaciones, asegurando la mitigación proactiva de riesgos operativos.</p>
+        <!-- CUERPO DE LA TERMINAL -->
+        <div class="terminal-body">
+            
+            <div class="prompt">cat intro.txt</div>
+            
+            <h1>[ Nombre Profesional ]</h1>
+            <p class="subtitle">Ingeniero en Informática | Especializándose en Ciberseguridad & Operaciones de Seguridad (SOC)</p>
+            <p>
+                Bienvenido a mi entorno de despliegue automatizado. Aquí centralizo el registro de mis capacidades técnicas, laboratorios interactivos y proyectos enfocados en la defensa de infraestructura digital, análisis de vulnerabilidades y respuesta ante incidentes.
+            </p>
+
+            <div class="divider">==================================================</div>
+
+            <div class="prompt">get --skills --certifications</div>
+
+            <h2>Áreas de Enfoque Técnico</h2>
+            <ul>
+                <li>Operaciones de Seguridad (Blue Team) & Análisis SOC</li>
+                <li>Análisis de Vulnerabilidades Web (OWASP Top 10, SQLi)</li>
+                <li>Fundamentos de Redes, Sistemas Operativos e Infraestructura TI</li>
+                <li>Automatización de Tareas y Arquitectura de Software Seguro</li>
+            </ul>
+
+            <h2>Certificaciones Destacadas</h2>
+            <div class="project-card">
+                <strong>Programa de Certificación en Fundamentos en Blue Team</strong>
+                <p class="card-date">Emisor acreditado | Fecha de Finalización</p>
+                <span class="tag">Seguridad Defensiva</span> <span class="tag">Monitoreo de Seguridad</span>
+            </div>
+
+            <div class="divider">==================================================</div>
+
+            <div class="prompt">list --projects --active</div>
+
+            <h2>Proyectos Técnicos & Laboratorios</h2>
+            
+            <div class="project-card">
+                <h3>Estructura de Conocimiento en Ciberseguridad</h3>
+                <p>Diseño e implementación de una base de conocimiento modular y jerárquica orientada al análisis ofensivo y defensivo, abarcando desde fundamentos de sistemas operativos hasta tácticas avanzadas de Red Team y mitigación de inyecciones SQL.</p>
+                <span class="tag">Markdown</span> <span class="tag">Documentación Técnica</span> <span class="tag">SQLi</span> <span class="tag">CIA Triad</span>
+            </div>
+
+            <div class="project-card">
+                <h3>Entornos de Simulación Práctica (TryHackMe / Hack The Box)</h3>
+                <p>Resolución sistemática de salas y laboratorios prácticos enfocados en análisis de tráfico, detección de anomalías y explotación controlada de vulnerabilidades web.</p>
+                <span class="tag">Penetration Testing</span> <span class="tag">Web App Security</span> <span class="tag">Labs</span>
+            </div>
+
+            <div class="divider">==================================================</div>
+
+            <div class="prompt">connect --social</div>
+            
+            <h2>Información de Contacto</h2>
+            <p>Puedes auditar mi actividad técnica o contactarme para oportunidades profesionales a través de los siguientes canales:</p>
+            <ul>
+                <li><strong>LinkedIn:</strong> <a href="#" target="_blank">Enlace a tu perfil</a></li>
+                <li><strong>GitHub:</strong> <a href="#" target="_blank">Enlace a tus repositorios</a></li>
+                <li><strong>Email Corporativo:</strong> <a href="mailto:tu-correo@ejemplo.com">tu-correo@ejemplo.com</a></li>
+            </ul>
+
+            <div class="terminal-footer">
+                <p>© 2026 — Desplegado de forma segura mediante GitHub Pages</p>
+            </div>
+
         </div>
-    </section>
-
-    <section id="organizacion-tecnica">
-        <h2>Estructura de Base de Conocimiento y Proyectos</h2>
-        <p>Organización sistemática de mi laboratorio de pruebas y repositorio de documentación técnica utilizando Obsidian Sync bajo una jerarquía estricta:</p>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>Código Modular</th>
-                    <th>Área de Estudio / Enfoque Técnico</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>11_Introduction to Cybersecurity</td>
-                    <td>Fundamentos esenciales de redes, protocolos y vectores de ataque iniciales.</td>
-                </tr>
-                <tr>
-                    <td>[Código de Módulo]</td>
-                    <td>Análisis práctico y documentación de vulnerabilidades web (ej. SQL Injection).</td>
-                </tr>
-                <tr>
-                    <td>24_Offensive Red Team</td>
-                    <td>Comprensión profunda de tácticas adversarias para el diseño de mejores defensas.</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <footer>
-        <hr>
-        <p>&copy; 2026 Sebastián Caracuel. Todos los derechos reservados bajo veracidad documental.</p>
-    </footer>
+    </div>
 
 </body>
 </html>
