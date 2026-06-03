@@ -23,10 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
     /* =========== TYPED ROLE =========== */
     function startTyping() {
       const roles = [
-        'Blue Team Analyst',
-        'SOC Operations',
-        'Threat Detection Eng.',
-        'Incident Responder'
+        'SOC Analyst L1',
+        'Blue Teaming',
+        'SAP BASIS',
       ];
       let ri = 0, ci = 0, deleting = false;
       const el = document.getElementById('typedRole');
@@ -36,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const word = roles[ri];
         if (!deleting) {
           el.textContent = word.slice(0, ++ci);
-          if (ci === word.length) { deleting = true; return setTimeout(tick, 1800); }
+          if (ci === word.length) { deleting = true; return setTimeout(tick, 3000); }
         } else {
           el.textContent = word.slice(0, --ci);
           if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; }
@@ -99,19 +98,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const raw = termInput.value.trim().toLowerCase();
         termInput.value = '';
 
-        addLine(`<span class="t-prompt">root@operator:~$</span> <span class="t-cmd">${raw}</span>`);
+        addLine(`<span class="t-prompt">root@invitado:~$</span> <span class="t-cmd">${raw}</span>`);
 
         if (raw === '') return;
 
         if (raw === 'clear') {
           termOutput.innerHTML = '';
-          addLine('<span class="t-prompt">root@operator:~$</span> <span class="cursor-blink">█</span>');
+          addLine('<span class="t-prompt">root@invitado:~$</span> <span class="cursor-blink">█</span>');
           return;
         }
 
         const resp = commands[raw] ?? `<span class="t-err">command not found: ${raw} — try 'help'</span>`;
         addLine(`<span class="t-response">${resp}</span>`);
-        addLine('<span class="t-prompt">root@operator:~$</span> <span class="cursor-blink">█</span>');
+        addLine('<span class="t-prompt">root@invitado:~$</span> <span class="cursor-blink">█</span>');
       });
     }
 
