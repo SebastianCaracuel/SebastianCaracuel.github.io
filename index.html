@@ -68,6 +68,26 @@
 
   <main class="container">
 
+    <!-- =================== TERMINAL =================== -->
+    <section class="panel reveal" id="terminal-section">
+      <div class="panel-label">TERMINAL.EXE</div>
+      <h2 class="section-title">// Interactive Terminal</h2>
+
+      <div class="terminal" id="terminal">
+        <div class="term-output" id="termOutput">
+          <div class="term-line"><span class="t-prompt">root@operator:~$</span> <span class="t-cmd">help</span></div>
+          <div class="term-line t-response">Available commands: <span class="hl-cyan">about · skills · projects · certs · contact · clear</span></div>
+          <div class="term-line"><span class="t-prompt">root@operator:~$</span> <span class="cursor-blink">█</span></div>
+        </div>
+
+        <div class="term-input-row">
+          <span class="t-prompt">root@operator:~$</span>
+          <input type="text" id="termInput" class="term-input" placeholder="type a command..." autocomplete="off" spellcheck="false" />
+        </div>
+      </div>
+    </section>
+
+
     <!-- =================== STATUS =================== -->
     <section class="panel reveal" id="status">
       <div class="panel-label">SYS_STATUS.EXE</div>
@@ -273,25 +293,6 @@
           <p>Professional development, technical specialization and first steps into Blue Team.</p>
         </div>
 
-      </div>
-    </section>
-
-    <!-- =================== TERMINAL =================== -->
-    <section class="panel reveal" id="terminal-section">
-      <div class="panel-label">TERMINAL.EXE</div>
-      <h2 class="section-title">// Interactive Terminal</h2>
-
-      <div class="terminal" id="terminal">
-        <div class="term-output" id="termOutput">
-          <div class="term-line"><span class="t-prompt">root@operator:~$</span> <span class="t-cmd">help</span></div>
-          <div class="term-line t-response">Available commands: <span class="hl-cyan">about · skills · projects · certs · contact · clear</span></div>
-          <div class="term-line"><span class="t-prompt">root@operator:~$</span> <span class="cursor-blink">█</span></div>
-        </div>
-
-        <div class="term-input-row">
-          <span class="t-prompt">root@operator:~$</span>
-          <input type="text" id="termInput" class="term-input" placeholder="type a command..." autocomplete="off" spellcheck="false" />
-        </div>
       </div>
     </section>
 
