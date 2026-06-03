@@ -2,287 +2,436 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sebastián Caracuel | Cybersecurity Analyst</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style2.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sebastián Caracuel | Cybersecurity Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=VT323&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style2.css" />
 </head>
 
 <body>
 
-    <!-- HERO -->
+  <!-- NOISE OVERLAY -->
+  <div class="noise"></div>
 
-    <header class="container">
+  <!-- CORNER DECORATIONS -->
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+  <div class="corner corner-bl"></div>
+  <div class="corner corner-br"></div>
 
-        <p class="operator-tag">
-            OPERATOR PROFILE
-        </p>
+  <!-- =================== HERO =================== -->
+  <header>
+    <div class="hero-inner container">
 
-        <h1 class="hero-title glitch">
-            SEBASTIÁN<br>
-            CARACUEL
+      <div class="boot-sequence" id="bootSeq">
+        <span class="boot-line">AIDEN_OS v3.1.4 — INITIALIZING...</span>
+        <span class="boot-line">LOADING OPERATOR PROFILE...</span>
+        <span class="boot-line">DECRYPTING CREDENTIALS...</span>
+        <span class="boot-line boot-ok">ACCESS GRANTED ██████████ 100%</span>
+      </div>
+
+      <div class="hero-content" id="heroContent">
+        <p class="operator-tag">// OPERATOR PROFILE LOADED</p>
+
+        <h1 class="hero-title glitch" data-text="SEBASTIÁN CARACUEL">
+          SEBASTIÁN<br />CARACUEL
         </h1>
 
         <p class="hero-subtitle">
-            Blue Team Analyst | SOC Operations | Threat Detection
+          <span class="typed" id="typedRole"></span><span class="cursor-blink">█</span>
         </p>
 
-    </header>
-
-    <main class="container">
-
-        <!-- SOC STATUS -->
-
-        <section class="panel">
-
-            <h2 class="section-title">
-                System Status
-            </h2>
-
-            <div class="status-grid">
-
-                <div class="status-card">
-                    <h3>Role</h3>
-                    <div class="status-number">
-                        BLUE TEAM
-                    </div>
-                </div>
-
-                <div class="status-card">
-                    <h3>Status</h3>
-                    <div class="status-number">
-                        ACTIVE
-                    </div>
-                </div>
-
-                <div class="status-card">
-                    <h3>Focus</h3>
-                    <div class="status-number">
-                        SOC
-                    </div>
-                </div>
-
-                <div class="status-card">
-                    <h3>Location</h3>
-                    <div class="status-number">
-                        CHILE
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- ABOUT -->
-
-        <section class="panel">
-
-            <h2 class="section-title">
-                About
-            </h2>
-
-            <p>
-                Cybersecurity professional focused on defensive security,
-                threat detection, incident response and security monitoring.
-
-                Passionate about Blue Team operations, continuous learning,
-                home labs and detection engineering.
-            </p>
-
-        </section>
-
-        <!-- SKILLS -->
-
-        <section class="panel">
-
-            <h2 class="section-title">
-                Skill Matrix
-            </h2>
-
-            <div class="skill">
-
-                <div class="skill-header">
-                    <span>SIEM</span>
-                    <span>85%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width:85%"></div>
-                </div>
-
-            </div>
-
-            <div class="skill">
-
-                <div class="skill-header">
-                    <span>Threat Detection</span>
-                    <span>80%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width:80%"></div>
-                </div>
-
-            </div>
-
-            <div class="skill">
-
-                <div class="skill-header">
-                    <span>Incident Response</span>
-                    <span>75%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width:75%"></div>
-                </div>
-
-            </div>
-
-            <div class="skill">
-
-                <div class="skill-header">
-                    <span>Python</span>
-                    <span>70%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width:70%"></div>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- CERTIFICATIONS -->
-
-        <section class="panel">
-
-            <h2 class="section-title">
-                Certifications
-            </h2>
-
-            <ul>
-                <li>SAL1 (Preparing)</li>
-                <li>Security Awareness & Defensive Security Training</li>
-                <li>Future Certifications...</li>
-            </ul>
-
-        </section>
-
-        <!-- PROJECTS -->
-
-        <section class="panel">
-
-            <h2 class="section-title">
-                Projects
-            </h2>
-
-            <ul>
-                <li>Home SOC Lab</li>
-                <li>Detection Rules Development</li>
-                <li>Threat Hunting Exercises</li>
-                <li>Blue Team Portfolio</li>
-            </ul>
-
-        </section>
-
-        <!-- TIMELINE -->
-
-        <section class="panel">
-
-            <h2 class="section-title">
-                Operation Timeline
-            </h2>
-
-            <div class="timeline">
-
-                <div class="timeline-item">
-                    <h3>2025</h3>
-                    <p>
-                        Blue Team training, SOC lab development and SAL1 preparation.
-                    </p>
-                </div>
-
-                <div class="timeline-item">
-                    <h3>2024</h3>
-                    <p>
-                        Security monitoring, incident triage and cybersecurity growth.
-                    </p>
-                </div>
-
-                <div class="timeline-item">
-                    <h3>2023</h3>
-                    <p>
-                        Professional development and technical specialization.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- TERMINAL -->
-
-        <section class="panel">
-
-            <h2 class="section-title">
-                Interactive Terminal
-            </h2>
-
-            <div class="terminal">
-
-                <div class="terminal-line">
-                    <span class="prompt">root@operator:~$</span>
-                    <span class="command">help</span>
-                </div>
-
-                <div class="terminal-line">
-                    Available commands:
-                </div>
-
-                <div class="terminal-line">
-                    about
-                </div>
-
-                <div class="terminal-line">
-                    skills
-                </div>
-
-                <div class="terminal-line">
-                    projects
-                </div>
-
-                <div class="terminal-line">
-                    certifications
-                </div>
-
-                <div class="terminal-line">
-                    contact
-                </div>
-
-                <div class="terminal-line">
-                    <span class="prompt">root@operator:~$</span>
-                    <span class="cursor">█</span>
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <footer>
-
-        <p>
-            SYSTEM ONLINE • 2026
-        </p>
-
-    </footer>
+        <div class="hero-badges">
+          <span class="badge badge-green">● ONLINE</span>
+          <span class="badge badge-cyan">BLUE TEAM</span>
+          <span class="badge badge-purple">SOC OPS</span>
+          <span class="badge badge-orange">CHILE / CHL</span>
+        </div>
+      </div>
+
+      <div class="hex-grid" aria-hidden="true">
+        <div class="hex"></div><div class="hex"></div><div class="hex"></div>
+        <div class="hex"></div><div class="hex"></div><div class="hex"></div>
+        <div class="hex"></div><div class="hex"></div><div class="hex"></div>
+      </div>
+
+    </div>
+
+    <div class="scroll-hint">
+      <span>SCROLL TO ACCESS</span>
+      <div class="scroll-arrow">▼</div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- =================== STATUS =================== -->
+    <section class="panel reveal" id="status">
+      <div class="panel-label">SYS_STATUS.EXE</div>
+      <h2 class="section-title">// System Status</h2>
+
+      <div class="status-grid">
+
+        <div class="status-card">
+          <div class="sc-icon">◈</div>
+          <div class="sc-label">ROLE</div>
+          <div class="sc-value cyan">BLUE TEAM</div>
+          <div class="sc-sub">Defensive Security</div>
+        </div>
+
+        <div class="status-card">
+          <div class="sc-icon">◉</div>
+          <div class="sc-label">STATUS</div>
+          <div class="sc-value green">ACTIVE</div>
+          <div class="sc-sub">Available for opportunities</div>
+        </div>
+
+        <div class="status-card">
+          <div class="sc-icon">◎</div>
+          <div class="sc-label">FOCUS</div>
+          <div class="sc-value purple">SOC OPS</div>
+          <div class="sc-sub">Security Operations Center</div>
+        </div>
+
+        <div class="status-card">
+          <div class="sc-icon">◌</div>
+          <div class="sc-label">LOCATION</div>
+          <div class="sc-value orange">CHILE</div>
+          <div class="sc-sub">América del Sur</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================== ABOUT =================== -->
+    <section class="panel reveal" id="about">
+      <div class="panel-label">ABOUT.TXT</div>
+      <h2 class="section-title">// About</h2>
+
+      <div class="about-body">
+        <div class="about-bracket">[</div>
+        <div class="about-text">
+          <p>Cybersecurity professional focused on <span class="hl-cyan">defensive security</span>,
+          <span class="hl-cyan">threat detection</span>, incident response and security monitoring.</p>
+          <p>Passionate about <span class="hl-purple">Blue Team operations</span>, continuous learning,
+          home labs and <span class="hl-purple">detection engineering</span>.</p>
+        </div>
+        <div class="about-bracket">]</div>
+      </div>
+    </section>
+
+    <!-- =================== SKILLS =================== -->
+    <section class="panel reveal" id="skills">
+      <div class="panel-label">SKILL_MATRIX.DAT</div>
+      <h2 class="section-title">// Skill Matrix</h2>
+
+      <div class="skills-list">
+
+        <div class="skill" data-level="85">
+          <div class="skill-header">
+            <span class="skill-name"><span class="sk-tag">[01]</span> SIEM</span>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress"></div>
+            <div class="skill-glow"></div>
+          </div>
+          <div class="skill-tags">Splunk · QRadar · Elastic</div>
+        </div>
+
+        <div class="skill" data-level="80">
+          <div class="skill-header">
+            <span class="skill-name"><span class="sk-tag">[02]</span> Threat Detection</span>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress"></div>
+            <div class="skill-glow"></div>
+          </div>
+          <div class="skill-tags">MITRE ATT&CK · IOC · TTP Mapping</div>
+        </div>
+
+        <div class="skill" data-level="75">
+          <div class="skill-header">
+            <span class="skill-name"><span class="sk-tag">[03]</span> Incident Response</span>
+            <span class="skill-pct">75%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress"></div>
+            <div class="skill-glow"></div>
+          </div>
+          <div class="skill-tags">Triage · Containment · Forensics</div>
+        </div>
+
+        <div class="skill" data-level="70">
+          <div class="skill-header">
+            <span class="skill-name"><span class="sk-tag">[04]</span> Python</span>
+            <span class="skill-pct">70%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress"></div>
+            <div class="skill-glow"></div>
+          </div>
+          <div class="skill-tags">Automation · Scripts · Parsing</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================== CERTIFICATIONS =================== -->
+    <section class="panel reveal" id="certs">
+      <div class="panel-label">CERTS.LOG</div>
+      <h2 class="section-title">// Certifications</h2>
+
+      <div class="cert-list">
+
+        <div class="cert-item cert-active">
+          <div class="cert-status">IN PROGRESS</div>
+          <div class="cert-name">SAL1</div>
+          <div class="cert-body">Security Analytics — SOC Level 1</div>
+          <div class="cert-progress-bar"><div class="cert-bar-fill" style="width:60%"></div></div>
+        </div>
+
+        <div class="cert-item cert-done">
+          <div class="cert-status">COMPLETED</div>
+          <div class="cert-name">Security Awareness</div>
+          <div class="cert-body">Defensive Security Training</div>
+        </div>
+
+        <div class="cert-item cert-pending">
+          <div class="cert-status">QUEUED</div>
+          <div class="cert-name">Future Certifications</div>
+          <div class="cert-body">Continuos expansion of knowledge base</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================== PROJECTS =================== -->
+    <section class="panel reveal" id="projects">
+      <div class="panel-label">PROJECTS.SH</div>
+      <h2 class="section-title">// Projects</h2>
+
+      <div class="project-grid">
+
+        <div class="project-card">
+          <div class="proj-num">01</div>
+          <div class="proj-title">Home SOC Lab</div>
+          <div class="proj-desc">Personal security operations environment for hands-on detection and monitoring practice.</div>
+          <div class="proj-tag">● ACTIVE</div>
+        </div>
+
+        <div class="project-card">
+          <div class="proj-num">02</div>
+          <div class="proj-title">Detection Rules</div>
+          <div class="proj-desc">Custom SIEM rules and Sigma signatures for real-world attack pattern coverage.</div>
+          <div class="proj-tag">● ACTIVE</div>
+        </div>
+
+        <div class="project-card">
+          <div class="proj-num">03</div>
+          <div class="proj-title">Threat Hunting</div>
+          <div class="proj-desc">Proactive exercises targeting advanced persistent threats and lateral movement.</div>
+          <div class="proj-tag">● ONGOING</div>
+        </div>
+
+        <div class="project-card">
+          <div class="proj-num">04</div>
+          <div class="proj-title">Blue Team Portfolio</div>
+          <div class="proj-desc">This very page — a live, growing record of skills, projects and progress.</div>
+          <div class="proj-tag">● YOU ARE HERE</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================== TIMELINE =================== -->
+    <section class="panel reveal" id="timeline">
+      <div class="panel-label">OPERATION_LOG.TXT</div>
+      <h2 class="section-title">// Operation Timeline</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="tl-year">2025 — 2026</div>
+          <div class="tl-title">Blue Team Operations</div>
+          <p>SOC lab development, SAL1 preparation and detection engineering practice.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-year">2024</div>
+          <div class="tl-title">Security Monitoring</div>
+          <p>Incident triage, security monitoring workflows and cybersecurity growth sprints.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-year">2023</div>
+          <div class="tl-title">Specialization Begin</div>
+          <p>Professional development, technical specialization and first steps into Blue Team.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================== TERMINAL =================== -->
+    <section class="panel reveal" id="terminal-section">
+      <div class="panel-label">TERMINAL.EXE</div>
+      <h2 class="section-title">// Interactive Terminal</h2>
+
+      <div class="terminal" id="terminal">
+        <div class="term-output" id="termOutput">
+          <div class="term-line"><span class="t-prompt">root@operator:~$</span> <span class="t-cmd">help</span></div>
+          <div class="term-line t-response">Available commands: <span class="hl-cyan">about · skills · projects · certs · contact · clear</span></div>
+          <div class="term-line"><span class="t-prompt">root@operator:~$</span> <span class="cursor-blink">█</span></div>
+        </div>
+
+        <div class="term-input-row">
+          <span class="t-prompt">root@operator:~$</span>
+          <input type="text" id="termInput" class="term-input" placeholder="type a command..." autocomplete="off" spellcheck="false" />
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-line"></div>
+    <div class="footer-content">
+      <span class="footer-tag">SEBASTIÁN CARACUEL</span>
+      <span class="footer-status">● SYSTEM ONLINE · 2026</span>
+      <span class="footer-tag">BLUE TEAM OPS</span>
+    </div>
+  </footer>
+
+  <script>
+    /* =========== BOOT SEQUENCE =========== */
+    const bootSeq = document.getElementById('bootSeq');
+    const heroContent = document.getElementById('heroContent');
+    const bootLines = bootSeq.querySelectorAll('.boot-line');
+
+    bootLines.forEach((line, i) => {
+      line.style.animationDelay = `${i * 0.6}s`;
+    });
+
+    setTimeout(() => {
+      bootSeq.style.opacity = '0';
+      bootSeq.style.transition = 'opacity 0.5s';
+      setTimeout(() => {
+        bootSeq.style.display = 'none';
+        heroContent.classList.add('visible');
+        startTyping();
+      }, 500);
+    }, 3200);
+
+    /* =========== TYPED ROLE =========== */
+    function startTyping() {
+      const roles = [
+        'Blue Team Analyst',
+        'SOC Operations',
+        'Threat Detection Eng.',
+        'Incident Responder'
+      ];
+      let ri = 0, ci = 0, deleting = false;
+      const el = document.getElementById('typedRole');
+
+      function tick() {
+        const word = roles[ri];
+        if (!deleting) {
+          el.textContent = word.slice(0, ++ci);
+          if (ci === word.length) { deleting = true; return setTimeout(tick, 1800); }
+        } else {
+          el.textContent = word.slice(0, --ci);
+          if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; }
+        }
+        setTimeout(tick, deleting ? 50 : 80);
+      }
+      tick();
+    }
+
+    /* =========== SKILL BARS =========== */
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const bar = e.target.querySelector('.skill-progress');
+          const lvl = e.target.dataset.level;
+          setTimeout(() => {
+            bar.style.width = lvl + '%';
+          }, 200);
+          skillObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.skill').forEach(s => skillObserver.observe(s));
+
+    /* =========== REVEAL ON SCROLL =========== */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in-view');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    /* =========== TERMINAL LOGIC =========== */
+    const termInput = document.getElementById('termInput');
+    const termOutput = document.getElementById('termOutput');
+
+    const commands = {
+      help: 'Available commands: <span class="hl-cyan">about · skills · projects · certs · contact · clear</span>',
+      about: 'Cybersecurity professional. Blue Team | SOC Ops | Threat Detection | Incident Response.',
+      skills: 'SIEM: 85% · Threat Detection: 80% · Incident Response: 75% · Python: 70%',
+      projects: '01 Home SOC Lab · 02 Detection Rules · 03 Threat Hunting · 04 Blue Team Portfolio',
+      certs: 'SAL1 [IN PROGRESS] · Security Awareness [DONE] · Future certs [QUEUED]',
+      contact: '<span class="hl-cyan">GitHub</span> · <span class="hl-purple">LinkedIn</span> — links coming soon.',
+      clear: '__CLEAR__',
+      whoami: '<span class="hl-cyan">sebastián_caracuel</span> — Blue Team Analyst. Threat hunter. Defender.',
+      sudo: 'Nice try. Permission denied. 🔐',
+      ls: 'about.txt  skills.dat  projects/  certs.log  contact.md',
+    };
+
+    termInput.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter') return;
+      const raw = termInput.value.trim().toLowerCase();
+      termInput.value = '';
+
+      addLine(`<span class="t-prompt">root@operator:~$</span> <span class="t-cmd">${raw}</span>`);
+
+      if (raw === '') return;
+
+      if (raw === 'clear') {
+        termOutput.innerHTML = '';
+        addLine('<span class="t-prompt">root@operator:~$</span> <span class="cursor-blink">█</span>');
+        return;
+      }
+
+      const resp = commands[raw] ?? `<span class="t-err">command not found: ${raw} — try 'help'</span>`;
+      addLine(`<span class="t-response">${resp}</span>`);
+      addLine('<span class="t-prompt">root@operator:~$</span> <span class="cursor-blink">█</span>');
+    });
+
+    function addLine(html) {
+      const div = document.createElement('div');
+      div.className = 'term-line';
+      div.innerHTML = html;
+      termOutput.appendChild(div);
+      termOutput.scrollTop = termOutput.scrollHeight;
+    }
+
+    /* =========== GLITCH RANDOM =========== */
+    const glitch = document.querySelector('.glitch');
+    if (glitch) {
+      setInterval(() => {
+        glitch.classList.add('glitch-active');
+        setTimeout(() => glitch.classList.remove('glitch-active'), 300);
+      }, 4000);
+    }
+  </script>
+</body>
+</html>
