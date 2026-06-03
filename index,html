@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebastián Caracuel | Profesional en Ciberseguridad e TI</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #003366; border-bottom: 2px solid #003366; padding-bottom: 10px; }
+        h2 { color: #005580; margin-top: 30px; }
+        h3 { color: #222; }
+        .badge { background: #e0e0e0; padding: 3px 8px; border-radius: 4px; font-size: 0.9em; display: inline-block; margin: 2px; }
+        .project, .experience { margin-bottom: 20px; border-left: 3px solid #005580; padding-left: 15px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sebastián Andrés Caracuel González</h1>
+        <p><strong>Ingeniero en Informática | Especialista en Ciberseguridad (Blue Team & Análisis de Seguridad)</strong></p>
+        <p>Ubicación: Puente Alto, Santiago, Chile | Enlaces: <a href="https://github.com/sebastianCaracuel">GitHub Profile</a></p>
+    </header>
+
+    <section id="sobre-mi">
+        <h2>Sobre Mí</h2>
+        <p>Ingeniero en Informática graduado de Duoc UC con formación especializada en seguridad defensiva (Blue Team) y operaciones de TI. Cuento con una base técnica sólida estructurada en fundamentos de sistemas operativos, análisis de seguridad, gestión de vulnerabilidades y mitigación de amenazas orientadas al cumplimiento de la tríada CIA (Confidencialidad, Integridad y Disponibilidad).</p>
+    </section>
+
+    <section id="educacion">
+        <h2>Educación y Certificaciones</h2>
+        <ul>
+            <li><strong>Ingeniería en Informática</strong> - Duoc UC (Graduado, 2024)</li>
+            <li><strong>Certificación: Fundamentos en Blue Team</strong> - Universidad de Santiago de Chile (USACH, Marzo 2025)</li>
+            <li><strong>Formación Continua y Plataformas Prácticas:</strong> Rutas de aprendizaje completadas en TryHackMe (Security Analyst), Hack The Box y 8.8 Academy.</li>
+        </ul>
+    </section>
+
+    <section id="habilidades">
+        <h2>Habilidades Técnicas</h2>
+        <div>
+            <span class="badge">Ciberseguridad Defensiva (Blue Team)</span>
+            <span class="badge">Análisis de Vulnerabilidades (SQL Injection)</span>
+            <span class="badge">Fundamentos de Sistemas Operativos</span>
+            <span class="badge">Arquitectura de Software</span>
+            <span class="badge">Tríada CIA</span>
+            <span class="badge">Consultoría TI</span>
+        </div>
+    </section>
+
+    <section id="experiencia">
+        <h2>Experiencia Profesional</h2>
+        
+        <div class="experience">
+            <h3>Consultor TI - SEIDOR</h3>
+            <p><em>2024 - Presente</em></p>
+            <p>Integración en la firma consultora tecnológica global, brindando soporte técnico, análisis de requerimientos organizacionales y aplicación de buenas prácticas de TI para optimizar la continuidad operativa y la infraestructura de los clientes.</p>
+        </div>
+
+        <div class="experience">
+            <h3>Supervisor de Monitores - Jumperpark</h3>
+            <p><em>2024</em></p>
+            <p>Responsable directo de la supervisión de personal técnico/operativo y de la inspección rigurosa de los sistemas de seguridad y equipamiento crítico de las instalaciones, asegurando la mitigación proactiva de riesgos operativos.</p>
+        </div>
+    </section>
+
+    <section id="organizacion-tecnica">
+        <h2>Estructura de Base de Conocimiento y Proyectos</h2>
+        <p>Organización sistemática de mi laboratorio de pruebas y repositorio de documentación técnica utilizando Obsidian Sync bajo una jerarquía estricta:</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Código Modular</th>
+                    <th>Área de Estudio / Enfoque Técnico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>11_Introduction to Cybersecurity</td>
+                    <td>Fundamentos esenciales de redes, protocolos y vectores de ataque iniciales.</td>
+                </tr>
+                <tr>
+                    <td>[Código de Módulo]</td>
+                    <td>Análisis práctico y documentación de vulnerabilidades web (ej. SQL Injection).</td>
+                </tr>
+                <tr>
+                    <td>24_Offensive Red Team</td>
+                    <td>Comprensión profunda de tácticas adversarias para el diseño de mejores defensas.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 Sebastián Caracuel. Todos los derechos reservados bajo veracidad documental.</p>
+    </footer>
+
+</body>
+</html>
