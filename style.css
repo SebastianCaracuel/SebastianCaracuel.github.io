@@ -1,0 +1,187 @@
+/* --- ESTILOS BASE TERMINAL RETRO / CYBERPUNK --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0b0c10;
+    color: #e0e0e0; /* Gris claro para texto principal para asegurar legibilidad corporativa */
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.terminal-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #11141a;
+    border: 2px solid #00ff66; /* Verde Neón Hacker */
+    border-radius: 6px;
+    box-shadow: 0 0 20px rgba(0, 255, 102, 0.15);
+    overflow: hidden;
+}
+
+/* Barra superior de la ventana de la terminal */
+.terminal-header {
+    background-color: #1f242d;
+    padding: 10px 15px;
+    border-bottom: 2px solid #00ff66;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.dot-red { background-color: #ff5f56; }
+.dot-yellow { background-color: #ffbd2e; }
+.dot-green { background-color: #27c93f; }
+
+.terminal-title {
+    color: #00ff66;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Cuerpo de la Terminal */
+.terminal-body {
+    padding: 25px;
+}
+
+/* Elementos de Consola / Prompt */
+.prompt {
+    color: #00ff66;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.prompt::before {
+    content: "sec-user@root:~# ";
+    color: #00bcff; /* Azul cian para contraste de comandos ejecutados */
+}
+
+h1, h2, h3 {
+    color: #00ff66;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 2rem;
+    border-bottom: 1px dashed #00ff66;
+    padding-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1rem; 
+    color: #00ff66;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+h2::before {
+    content: "> ";
+    margin-right: 8px;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #cdcdcd;
+}
+
+/* Enlaces Estilo Cyberpunk */
+a {
+    color: #00bcff;
+    text-decoration: none;
+    border-bottom: 1px dashed #00bcff;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #00ff66;
+    border-bottom: 1px solid #00ff66;
+    background-color: rgba(0, 255, 102, 0.1);
+}
+
+/* Contenedores de Información Metódica (Listas) */
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+li::before {
+    content: "[+]";
+    position: absolute;
+    left: 0;
+    color: #00ff66;
+}
+
+/* Tarjetas de Proyectos y Certificaciones */
+.project-card {
+    border: 1px solid #1f242d;
+    background-color: #161a23;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #00ff66;
+}
+
+.card-date {
+    margin-bottom: 5px; 
+    font-size: 0.9rem; 
+    color: #707a8a;
+}
+
+/* Etiquetas de Tecnologías (Tags) */
+.tag {
+    display: inline-block;
+    background-color: rgba(0, 188, 255, 0.1);
+    color: #00bcff;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-top: 5px;
+    border: 1px solid rgba(0, 188, 255, 0.3);
+}
+
+/* Footer de la Terminal */
+.terminal-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #1f242d;
+    font-size: 0.8rem;
+    color: #707a8a;
+}
+
+/* Líneas de separación estéticas (Separadores CLI) */
+.divider {
+    color: #1f242d;
+    margin: 20px 0;
+    user-select: none;
+}
