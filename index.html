@@ -1,92 +1,288 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terminal de Seguridad // Portafolio Profesional</title>
-    <!-- Vinculación del archivo de estilos externo -->
-    <link rel="stylesheet" href="style.css">
+
+    <title>Sebastián Caracuel | Cybersecurity Analyst</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-    <div class="terminal-container">
-        <!-- BARRA SUPERIOR DE LA VENTANA -->
-        <div class="terminal-header">
-            <div class="terminal-buttons">
-                <span class="dot dot-red"></span>
-                <span class="dot dot-yellow"></span>
-                <span class="dot dot-green"></span>
-            </div>
-            <div class="terminal-title">bash — security_portfolio.sh</div>
-            <div></div>
-        </div>
+    <!-- HERO -->
 
-        <!-- CUERPO DE LA TERMINAL -->
-        <div class="terminal-body">
-            
-            <div class="prompt">cat intro.txt</div>
-            
-            <h1>[ Nombre Profesional ]</h1>
-            <p class="subtitle">Ingeniero en Informática | Especializándose en Ciberseguridad & Operaciones de Seguridad (SOC)</p>
+    <header class="container">
+
+        <p class="operator-tag">
+            OPERATOR PROFILE
+        </p>
+
+        <h1 class="hero-title glitch">
+            SEBASTIÁN<br>
+            CARACUEL
+        </h1>
+
+        <p class="hero-subtitle">
+            Blue Team Analyst | SOC Operations | Threat Detection
+        </p>
+
+    </header>
+
+    <main class="container">
+
+        <!-- SOC STATUS -->
+
+        <section class="panel">
+
+            <h2 class="section-title">
+                System Status
+            </h2>
+
+            <div class="status-grid">
+
+                <div class="status-card">
+                    <h3>Role</h3>
+                    <div class="status-number">
+                        BLUE TEAM
+                    </div>
+                </div>
+
+                <div class="status-card">
+                    <h3>Status</h3>
+                    <div class="status-number">
+                        ACTIVE
+                    </div>
+                </div>
+
+                <div class="status-card">
+                    <h3>Focus</h3>
+                    <div class="status-number">
+                        SOC
+                    </div>
+                </div>
+
+                <div class="status-card">
+                    <h3>Location</h3>
+                    <div class="status-number">
+                        CHILE
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ABOUT -->
+
+        <section class="panel">
+
+            <h2 class="section-title">
+                About
+            </h2>
+
             <p>
-                Bienvenido a mi entorno de despliegue automatizado. Aquí centralizo el registro de mis capacidades técnicas, laboratorios interactivos y proyectos enfocados en la defensa de infraestructura digital, análisis de vulnerabilidades y respuesta ante incidentes.
+                Cybersecurity professional focused on defensive security,
+                threat detection, incident response and security monitoring.
+
+                Passionate about Blue Team operations, continuous learning,
+                home labs and detection engineering.
             </p>
 
-            <div class="divider">==================================================</div>
+        </section>
 
-            <div class="prompt">get --skills --certifications</div>
+        <!-- SKILLS -->
 
-            <h2>Áreas de Enfoque Técnico</h2>
+        <section class="panel">
+
+            <h2 class="section-title">
+                Skill Matrix
+            </h2>
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span>SIEM</span>
+                    <span>85%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:85%"></div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span>Threat Detection</span>
+                    <span>80%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:80%"></div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span>Incident Response</span>
+                    <span>75%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:75%"></div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span>Python</span>
+                    <span>70%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:70%"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CERTIFICATIONS -->
+
+        <section class="panel">
+
+            <h2 class="section-title">
+                Certifications
+            </h2>
+
             <ul>
-                <li>Operaciones de Seguridad (Blue Team) & Análisis SOC</li>
-                <li>Análisis de Vulnerabilidades Web (OWASP Top 10, SQLi)</li>
-                <li>Fundamentos de Redes, Sistemas Operativos e Infraestructura TI</li>
-                <li>Automatización de Tareas y Arquitectura de Software Seguro</li>
+                <li>SAL1 (Preparing)</li>
+                <li>Security Awareness & Defensive Security Training</li>
+                <li>Future Certifications...</li>
             </ul>
 
-            <h2>Certificaciones Destacadas</h2>
-            <div class="project-card">
-                <strong>Programa de Certificación en Fundamentos en Blue Team</strong>
-                <p class="card-date">Emisor acreditado | Fecha de Finalización</p>
-                <span class="tag">Seguridad Defensiva</span> <span class="tag">Monitoreo de Seguridad</span>
-            </div>
+        </section>
 
-            <div class="divider">==================================================</div>
+        <!-- PROJECTS -->
 
-            <div class="prompt">list --projects --active</div>
+        <section class="panel">
 
-            <h2>Proyectos Técnicos & Laboratorios</h2>
-            
-            <div class="project-card">
-                <h3>Estructura de Conocimiento en Ciberseguridad</h3>
-                <p>Diseño e implementación de una base de conocimiento modular y jerárquica orientada al análisis ofensivo y defensivo, abarcando desde fundamentos de sistemas operativos hasta tácticas avanzadas de Red Team y mitigación de inyecciones SQL.</p>
-                <span class="tag">Markdown</span> <span class="tag">Documentación Técnica</span> <span class="tag">SQLi</span> <span class="tag">CIA Triad</span>
-            </div>
+            <h2 class="section-title">
+                Projects
+            </h2>
 
-            <div class="project-card">
-                <h3>Entornos de Simulación Práctica (TryHackMe / Hack The Box)</h3>
-                <p>Resolución sistemática de salas y laboratorios prácticos enfocados en análisis de tráfico, detección de anomalías y explotación controlada de vulnerabilidades web.</p>
-                <span class="tag">Penetration Testing</span> <span class="tag">Web App Security</span> <span class="tag">Labs</span>
-            </div>
-
-            <div class="divider">==================================================</div>
-
-            <div class="prompt">connect --social</div>
-            
-            <h2>Información de Contacto</h2>
-            <p>Puedes auditar mi actividad técnica o contactarme para oportunidades profesionales a través de los siguientes canales:</p>
             <ul>
-                <li><strong>LinkedIn:</strong> <a href="#" target="_blank">Enlace a tu perfil</a></li>
-                <li><strong>GitHub:</strong> <a href="#" target="_blank">Enlace a tus repositorios</a></li>
-                <li><strong>Email Corporativo:</strong> <a href="mailto:tu-correo@ejemplo.com">tu-correo@ejemplo.com</a></li>
+                <li>Home SOC Lab</li>
+                <li>Detection Rules Development</li>
+                <li>Threat Hunting Exercises</li>
+                <li>Blue Team Portfolio</li>
             </ul>
 
-            <div class="terminal-footer">
-                <p>© 2026 — Desplegado de forma segura mediante GitHub Pages</p>
+        </section>
+
+        <!-- TIMELINE -->
+
+        <section class="panel">
+
+            <h2 class="section-title">
+                Operation Timeline
+            </h2>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <h3>2025</h3>
+                    <p>
+                        Blue Team training, SOC lab development and SAL1 preparation.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>2024</h3>
+                    <p>
+                        Security monitoring, incident triage and cybersecurity growth.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>2023</h3>
+                    <p>
+                        Professional development and technical specialization.
+                    </p>
+                </div>
+
             </div>
 
-        </div>
-    </div>
+        </section>
 
-</body>
-</html>
+        <!-- TERMINAL -->
+
+        <section class="panel">
+
+            <h2 class="section-title">
+                Interactive Terminal
+            </h2>
+
+            <div class="terminal">
+
+                <div class="terminal-line">
+                    <span class="prompt">root@operator:~$</span>
+                    <span class="command">help</span>
+                </div>
+
+                <div class="terminal-line">
+                    Available commands:
+                </div>
+
+                <div class="terminal-line">
+                    about
+                </div>
+
+                <div class="terminal-line">
+                    skills
+                </div>
+
+                <div class="terminal-line">
+                    projects
+                </div>
+
+                <div class="terminal-line">
+                    certifications
+                </div>
+
+                <div class="terminal-line">
+                    contact
+                </div>
+
+                <div class="terminal-line">
+                    <span class="prompt">root@operator:~$</span>
+                    <span class="cursor">█</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            SYSTEM ONLINE • 2026
+        </p>
+
+    </footer>

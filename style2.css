@@ -1,0 +1,381 @@
+/* =====================================
+   WATCH DOGS / CYBERPUNK CV THEME
+   ===================================== */
+
+:root {
+    --bg-primary: #05070a;
+    --bg-secondary: #0b1120;
+    --panel-bg: rgba(17, 24, 39, 0.8);
+
+    --primary: #00d9ff;
+    --primary-glow: #00d9ff88;
+
+    --secondary: #7c3aed;
+    --secondary-glow: #7c3aed88;
+
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+
+    --text-main: #f3f4f6;
+    --text-secondary: #9ca3af;
+
+    --border: rgba(0, 217, 255, 0.25);
+
+    --font-main: "JetBrains Mono", monospace;
+}
+
+/* =====================================
+   RESET
+   ===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* =====================================
+   SCANLINES
+   ===================================== */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0px,
+            transparent 2px,
+            rgba(255,255,255,0.02) 3px
+        );
+
+    pointer-events: none;
+    z-index: 999;
+}
+
+/* =====================================
+   CYBER GRID
+   ===================================== */
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(0,217,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,217,255,.03) 1px, transparent 1px);
+
+    background-size: 50px 50px;
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* =====================================
+   CONTAINER
+   ===================================== */
+
+.container {
+    width: min(1200px, 90%);
+    margin: auto;
+}
+
+/* =====================================
+   HEADER
+   ===================================== */
+
+header {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 2rem;
+}
+
+.operator-tag {
+    color: var(--primary);
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 800;
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 10px var(--primary),
+        0 0 25px var(--primary-glow);
+}
+
+.hero-subtitle {
+    margin-top: 1rem;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+/* =====================================
+   PANELS
+   ===================================== */
+
+.panel {
+    background: var(--panel-bg);
+
+    border: 1px solid var(--border);
+
+    backdrop-filter: blur(10px);
+
+    padding: 2rem;
+
+    border-radius: 12px;
+
+    margin-bottom: 2rem;
+
+    transition: all 0.3s ease;
+}
+
+.panel:hover {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 15px var(--primary-glow);
+}
+
+/* =====================================
+   SECTION TITLES
+   ===================================== */
+
+.section-title {
+    color: var(--primary);
+
+    margin-bottom: 1rem;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+/* =====================================
+   TERMINAL
+   ===================================== */
+
+.terminal {
+    background: #000;
+
+    border: 1px solid var(--primary);
+
+    padding: 1.5rem;
+
+    border-radius: 10px;
+
+    font-size: 0.95rem;
+}
+
+.terminal-line {
+    margin-bottom: 0.5rem;
+}
+
+.prompt {
+    color: var(--success);
+}
+
+.command {
+    color: var(--primary);
+}
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* =====================================
+   SKILL BARS
+   ===================================== */
+
+.skill {
+    margin-bottom: 1.5rem;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 0.5rem;
+}
+
+.skill-bar {
+    height: 12px;
+
+    background: #111;
+
+    border-radius: 50px;
+
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    box-shadow:
+        0 0 10px var(--primary);
+
+    width: 0;
+}
+
+/* =====================================
+   SOC STATUS
+   ===================================== */
+
+.status-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 1rem;
+}
+
+.status-card {
+    background: rgba(0,0,0,.4);
+
+    border: 1px solid var(--border);
+
+    padding: 1.5rem;
+
+    border-radius: 10px;
+}
+
+.status-number {
+    font-size: 2rem;
+
+    color: var(--primary);
+
+    margin-top: .5rem;
+}
+
+/* =====================================
+   TIMELINE
+   ===================================== */
+
+.timeline {
+    border-left: 2px solid var(--primary);
+
+    padding-left: 2rem;
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    width: 14px;
+    height: 14px;
+
+    background: var(--primary);
+
+    border-radius: 50%;
+
+    left: -2.45rem;
+    top: .3rem;
+
+    box-shadow:
+        0 0 15px var(--primary);
+}
+
+/* =====================================
+   LINKS
+   ===================================== */
+
+a {
+    color: var(--primary);
+
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow:
+        0 0 10px var(--primary);
+}
+
+/* =====================================
+   GLITCH EFFECT
+   ===================================== */
+
+.glitch {
+    position: relative;
+}
+
+.glitch:hover {
+    animation: glitch 0.3s linear;
+}
+
+@keyframes glitch {
+
+    0% {
+        transform: translate(0);
+    }
+
+    25% {
+        transform: translate(-2px, 2px);
+    }
+
+    50% {
+        transform: translate(2px, -2px);
+    }
+
+    75% {
+        transform: translate(-1px, 1px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+/* =====================================
+   FOOTER
+   ===================================== */
+
+footer {
+    text-align: center;
+
+    padding: 3rem 0;
+
+    color: var(--text-secondary);
+}
