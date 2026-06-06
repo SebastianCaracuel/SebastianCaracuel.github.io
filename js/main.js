@@ -1,134 +1,144 @@
 document.addEventListener('DOMContentLoaded', () => {
-    /* =========== BOOT SEQUENCE =========== */
-    const bootSeq = document.getElementById('bootSeq');
-    const heroContent = document.getElementById('heroContent');
-    const bootLines = bootSeq ? bootSeq.querySelectorAll('.boot-line') : [];
 
-    bootLines.forEach((line, i) => {
-      line.style.animationDelay = `${i * 0.6}s`;
-    });
+  /* Clock */
+  const cl = document.getElementById('sysTime');
+  const tick = () => cl.textContent = new Date().toLocaleTimeString('en-GB') + ' UTC';
+  tick(); setInterval(tick,1000);
 
-    if (bootSeq) {
-      setTimeout(() => {
-        bootSeq.style.opacity = '0';
-        bootSeq.style.transition = 'opacity 0.5s';
-        setTimeout(() => {
-          bootSeq.style.display = 'none';
-          if (heroContent) heroContent.classList.add('visible');
-          startTyping();
-        }, 500);
-      }, 3200);
+  /* Dismiss error popup */
+  window.dismissErr = () => {
+    const w = document.getElementById('winError');
+    if(w) w.style.display='none';
+  };
+  document.getElementById('closeErr').addEventListener('click', dismissErr);
+  setTimeout(dismissErr, 8000);
+
+  /* Boot sequence */
+  const bootSeq = document.getElementById('bootSeq');
+  const heroContent = document.getElementById('heroContent');
+  const lines = bootSeq.querySelectorAll('.boot-line');
+  lines.forEach((l,i) => l.style.animationDelay = (i*.6)+'s');
+  setTimeout(() => {
+    bootSeq.style.transition='opacity .5s'; bootSeq.style.opacity='0';
+    setTimeout(()=>{ bootSeq.style.display='none'; heroContent.classList.add('visible'); startTyping(); }, 500);
+  }, lines.length*600+300);
+
+  /* Typed role */
+  function startTyping() {
+    const roles = ['SOC Analyst L1','Blue Team Operator','SAP BASIS Consultant','Threat Hunter'];
+    let ri=0,ci=0,del=false;
+    const el = document.getElementById('typedRole');
+    function t(){
+      const w=roles[ri];
+      if(!del){ el.textContent=w.slice(0,++ci); if(ci===w.length){del=true;return setTimeout(t,2800);} }
+      else { el.textContent=w.slice(0,--ci); if(ci===0){del=false;ri=(ri+1)%roles.length;} }
+      setTimeout(t,del?40:80);
     }
+    t();
+  }
 
-    /* =========== TYPED ROLE =========== */
-    function startTyping() {
-      const roles = [
-        'SOC Analyst L1',
-        'Blue Teaming',
-        'SAP BASIS',
-      ];
-      let ri = 0, ci = 0, deleting = false;
-      const el = document.getElementById('typedRole');
-      if (!el) return;
-
-      function tick() {
-        const word = roles[ri];
-        if (!deleting) {
-          el.textContent = word.slice(0, ++ci);
-          if (ci === word.length) { deleting = true; return setTimeout(tick, 3000); }
-        } else {
-          el.textContent = word.slice(0, --ci);
-          if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; }
-        }
-        setTimeout(tick, deleting ? 50 : 80);
+  /* Skill bars */
+  const sObs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const bar=e.target.querySelector('.bar-fill');
+        if(bar) setTimeout(()=>bar.style.width=e.target.dataset.lv+'%',150);
+        sObs.unobserve(e.target);
       }
-      tick();
+    });
+  },{threshold:.3});
+  document.querySelectorAll('.skill-item').forEach(s=>sObs.observe(s));
+
+  /* Reveal */
+  const rObs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('in');rObs.unobserve(e.target);} });
+  },{threshold:.07});
+  document.querySelectorAll('.reveal').forEach(el=>rObs.observe(el));
+
+  /* Glitch */
+  const g=document.querySelector('.glitch');
+  if(g) setInterval(()=>{ g.classList.add('active'); setTimeout(()=>g.classList.remove('active'),220); },4000);
+
+  
+  
+  
+  /* Terminal */
+  const input=document.getElementById('termInput');
+  const out=document.getElementById('termOut');
+  const cmds={
+    help:    'Commands: <span style="color:var(--accent)">about · skills · projects · certs · contact · whoami · clear</span>',
+    about:   'Computer Engineer. SAP BASIS consultant by day, cybersecurity apprentice by night.',
+    skills:  'SIEM: 85% · Threat Detection: 80% · Incident Response: 75% · Python: 70% · SAP BASIS: 78%',
+    projects:'01 Portfolio · 02 Home SOC Lab · 03 Detection Rules · 04 Threat Hunting',
+    certs:   'SAL1 [IN PROGRESS 60%] · Security Awareness [DONE] · Future certs [QUEUED]',
+    contact: 'GitHub · LinkedIn — links coming soon.',
+    whoami:  'sebastián_caracuel — Blue Team Analyst. Threat hunter. Defender.',
+    sudo:    '<span style="color:var(--red-err)">Permission denied. Nice try. 🔐</span>',
+    ls:      'about.txt  skills.dat  projects/  certs.log  contact.md',
+  };
+  function addLine(html){ const d=document.createElement('div'); d.className='tl'; d.innerHTML=html; out.appendChild(d); out.scrollTop=out.scrollHeight; }
+  input.addEventListener('keydown',e=>{
+    if(e.key!=='Enter')return;
+    const raw=input.value.trim().toLowerCase(); input.value='';
+    addLine(`<span class="tp">operator@local:~$</span> <span class="tc">${raw}</span>`);
+    if(!raw)return;
+    if(raw==='clear'){ out.innerHTML=''; addLine('<span class="tp">operator@local:~$</span> <span class="cursor-blink">█</span>'); return; }
+    const r=cmds[raw]||`<span class="te">command not found: ${raw} — type 'help'</span>`;
+    addLine(`<span class="tr">${r}</span>`);
+    addLine('<span class="tp">operator@local:~$</span> <span class="cursor-blink">█</span>');
+  });
+ 
+    /* ========== TICKER DINÁMICO ========== */
+  
+  const certifications = {
+    inProgress: [
+      { name: "Security+", platform: "CompTIA", progress: 0, icon: "🔐" },
+      { name: "CJCA", platform: "HackTheBox", progress: 75, icon: "🔥" }
+    ],
+    completed: [
+      { name: "SAL1", platform: "TryHackMe - Security Analyst L1", icon: "🕵🏻" },
+      { name: "DP-900", platform: "Azure Data Fundamentals", icon: "☁️" }
+    ]
+  };
+
+  // LISTA DE MENSAJES QUE ROTARÁN (REDUCIDA Y OPTIMIZADA)
+  const broadcastItems = [
+    // ASCII Art minimalista (3 items)
+    
+    "◥(■_■)◤  BLUE TEAM ACTIVE  ◥(■_■)◤",
+    
+   //Certificaciones completadas
+   ...certifications.completed.map(cert => `${cert.icon} ${cert.name} [${cert.platform}] ✅ COMPLETADA`),
+    
+    "┌(◣_◢)┘  RED TEAM ACTIVE  ┌(◣_◢)┘",
+    
+    //Certificaciones por completar
+    ...certifications.inProgress.map(cert => {
+      const bar = "█".repeat(Math.floor(cert.progress / 10)) + "░".repeat(10 - Math.floor(cert.progress / 10));
+      return `${cert.icon} ${cert.name} [${cert.platform}] ${bar} ${cert.progress}% EN PROGRESO`;
+    }),
+    
+  ];
+
+  // Control del ticker - CADA ITEM DURA 9 SEGUNDOS (más tiempo para leer)
+  let currentIndex = 0;
+
+  function getCurrentBroadcast() {
+    const item = broadcastItems[currentIndex % broadcastItems.length];
+    return typeof item === 'function' ? item() : item;
+  }
+
+  function updateTicker() {
+    const tickerSpan = document.querySelector('.ticker-scroll span');
+    if (tickerSpan) {
+      tickerSpan.innerHTML = getCurrentBroadcast();
+      currentIndex++;
     }
+  }
 
-    /* =========== SKILL BARS =========== */
-    const skillObserver = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          const bar = e.target.querySelector('.skill-progress');
-          const lvl = e.target.dataset.level;
-          if (bar) {
-            setTimeout(() => {
-              bar.style.width = lvl + '%';
-            }, 200);
-          }
-          skillObserver.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.3 });
-
-    document.querySelectorAll('.skill').forEach(s => skillObserver.observe(s));
-
-    /* =========== REVEAL ON SCROLL =========== */
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('in-view');
-          revealObserver.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-    /* =========== TERMINAL LOGIC =========== */
-    const termInput = document.getElementById('termInput');
-    const termOutput = document.getElementById('termOutput');
-
-    const commands = {
-      help: 'Available commands: <span class="hl-cyan">about · skills · projects · certs · contact · clear</span>',
-      about: 'Cybersecurity professional. Blue Team | SOC Ops | Threat Detection | Incident Response.',
-      skills: 'SIEM: 85% · Threat Detection: 80% · Incident Response: 75% · Python: 70%',
-      projects: '01 Home SOC Lab · 02 Detection Rules · 03 Threat Hunting · 04 Blue Team Portfolio',
-      certs: 'SAL1 [IN PROGRESS] · Security Awareness [DONE] · Future certs [QUEUED]',
-      contact: '<span class="hl-cyan">GitHub</span> · <span class="hl-purple">LinkedIn</span> — links coming soon.',
-      clear: '__CLEAR__',
-      whoami: '<span class="hl-cyan">sebastián_caracuel</span> — Blue Team Analyst. Threat hunter. Defender.',
-      sudo: 'Nice try. Permission denied. 🔐',
-      ls: 'about.txt  skills.dat  projects/  certs.log  contact.md',
-    };
-
-    if (termInput && termOutput) {
-      termInput.addEventListener('keydown', (e) => {
-        if (e.key !== 'Enter') return;
-        const raw = termInput.value.trim().toLowerCase();
-        termInput.value = '';
-
-        addLine(`<span class="t-prompt">root@invitado:~$</span> <span class="t-cmd">${raw}</span>`);
-
-        if (raw === '') return;
-
-        if (raw === 'clear') {
-          termOutput.innerHTML = '';
-          addLine('<span class="t-prompt">root@invitado:~$</span> <span class="cursor-blink">█</span>');
-          return;
-        }
-
-        const resp = commands[raw] ?? `<span class="t-err">command not found: ${raw} — try 'help'</span>`;
-        addLine(`<span class="t-response">${resp}</span>`);
-        addLine('<span class="t-prompt">root@invitado:~$</span> <span class="cursor-blink">█</span>');
-      });
-    }
-
-    function addLine(html) {
-      if (!termOutput) return;
-      const div = document.createElement('div');
-      div.className = 'term-line';
-      div.innerHTML = html;
-      termOutput.appendChild(div);
-      termOutput.scrollTop = termOutput.scrollHeight;
-    }
-
-    /* =========== GLITCH RANDOM =========== */
-    const glitch = document.querySelector('.glitch');
-    if (glitch) {
-      setInterval(() => {
-        glitch.classList.add('glitch-active');
-        setTimeout(() => glitch.classList.remove('glitch-active'), 300);
-      }, 4000);
-    }
+  // CAMBIAR CADA 9 SEGUNDOS (antes era 4)
+  setInterval(updateTicker, 9000);
+  setTimeout(updateTicker, 100);
+ 
+  
 });
