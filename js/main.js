@@ -157,8 +157,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // CAMBIAR CADA 9 SEGUNDOS (antes era 4)
-  setInterval(updateTicker, 7000);
+  // CAMBIAR CADA 8 SEGUNDOS (antes era 4)
+  setInterval(updateTicker, 8000);
   setTimeout(updateTicker, 100);
 
 
