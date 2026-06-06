@@ -282,7 +282,7 @@ header {
 .ticker-scroll span {
   display:inline-block;
   font-family:var(--font-retro); font-size:1rem; color:var(--gray-light);
-  animation: scrollTxt 28s linear infinite, glitchTicker 4s ease-in-out infinite;
+  animation: scrollTxt 28s linear infinite, glitchTicker 5s ease-in-out infinite;
   text-shadow: 0 0 5px var(--accent);
   white-space: nowrap;
   padding-left:100%;
