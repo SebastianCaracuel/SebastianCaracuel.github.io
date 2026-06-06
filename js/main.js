@@ -111,9 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
     },
 
-
-
-
   };
 
   // LISTA DE MENSAJES QUE ROTARÁN (REDUCIDA Y OPTIMIZADA)
@@ -158,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // CAMBIAR CADA 8 SEGUNDOS (antes era 4)
-  setInterval(updateTicker, 8000);
+  setInterval(updateTicker, 8500);
   setTimeout(updateTicker, 100);
 
 
