@@ -282,7 +282,7 @@ header {
 .ticker-scroll span {
   display:inline-block;
   font-family:var(--font-retro); font-size:1rem; color:var(--gray-light);
-  animation: scrollTxt 28s linear infinite, glitchTicker 5s ease-in-out infinite;
+  animation: scrollTxt 28s linear infinite;
   text-shadow: 0 0 5px var(--accent);
   white-space: nowrap;
   padding-left:100%;
@@ -296,12 +296,6 @@ header {
   }
 }
 
-@keyframes glitchTicker {
-  0%, 100% { text-shadow: 0 0 5px var(--accent); }
-  96% { text-shadow: -2px 0 var(--red-err), 2px 0 var(--accent); }
-  97% { text-shadow: 2px 0 var(--red-err), -2px 0 var(--accent); }
-  98% { text-shadow: 0 0 5px var(--accent); }
-}
 
 @keyframes scanLine {
   0% { left: -100%; }
