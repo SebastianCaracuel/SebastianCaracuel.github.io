@@ -120,12 +120,12 @@ document.addEventListener('DOMContentLoaded', () => {
     "◥(■_■)◤  BLUE TEAM  ◥(■_■)◤",
 
     //Certificaciones BTL
-    ...certifications.blueTeam.completed.map(cert => `${cert.icon} ${cert.name} [${cert.platform}] ✅ COMPLETADA`),
+    ...certifications.blueTeam.completed.map(cert => `${cert.icon} ${cert.name} [${cert.platform}] ✅ COMPLETED`),
 
     //Certificaciones en Progreso BTL
     ...certifications.blueTeam.inProgress.map(cert => {
       const bar = "█".repeat(Math.floor(cert.progress / 10)) + "░".repeat(10 - Math.floor(cert.progress / 10));
-      return `${cert.icon} ${cert.name} [${cert.platform}] ${bar} ${cert.progress}% EN PROGRESO`;
+      return `${cert.icon} ${cert.name} [${cert.platform}] ${bar} ${cert.progress}% PROGRESS`;
     }),
 
     "┌(◣_◢)┘  RED TEAM  ┌(◣_◢)┘",
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
    //Certificaciones en Progreso RTM
     ...certifications.redTeam.inProgress.map(cert => {
       const bar = "█".repeat(Math.floor(cert.progress / 10)) + "░".repeat(10 - Math.floor(cert.progress / 10));
-      return `${cert.icon} ${cert.name} [${cert.platform}] ${bar} ${cert.progress}% EN PROGRESO`;
+      return `${cert.icon} ${cert.name} [${cert.platform}] ${bar} ${cert.progress}% PROGRESS`;
     }),
 
   ];
