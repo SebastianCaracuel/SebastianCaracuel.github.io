@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* Clock */
   const cl = document.getElementById('sysTime');
-  const tick = () => cl.textContent = new Date().toLocaleTimeString('en-GB') + ' UTC';
+  const tick = () => cl.textContent = new Date().toLocaleTimeString('en-CL') + ' UTC';
   tick(); setInterval(tick, 1000);
 
   /* Dismiss error popup */
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* Typed role */
   function startTyping() {
-    const roles = ['SOC Analyst L1', 'Blue Team Operator', 'SAP BASIS Consultant', 'Threat Hunter'];
+    const roles = ['SOC Analyst L1', 'Blue Team', 'SAP BASIS Consultant', 'Ethical Hacker'];
     let ri = 0, ci = 0, del = false;
     const el = document.getElementById('typedRole');
     function t() {
