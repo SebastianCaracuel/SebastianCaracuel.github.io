@@ -100,13 +100,13 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
       inProgress: [
         { name: "Security+", platform: "CompTIA", progress: 0, icon: "🔐" },
-        { name: "CDSA", platform: "HTB - Certified Defensive Security Analyst", progress: 0, icon: "🛡️" }
+        { name: "CDSA", platform: "Certified Defensive Security Analyst", progress: 0, icon: "🛡️" }
       ],
     },
     /*Certificaciones RED TEAM*/
      redTeam: {
       inProgress: [
-        { name: "CJCA+", platform: "HTB - Certified Junior Cybersecurity Associate", progress: 75, icon: "⚔️" },
+        { name: "CJCA", platform: "Certified Junior Cybersecurity Associate", progress: 75, icon: "⚔️" },
         { name: "EJPT", platform: "eLearnSecurity", progress: 0, icon: "🃏" }
       ],
     },
