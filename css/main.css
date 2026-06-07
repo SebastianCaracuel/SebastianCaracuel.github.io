@@ -367,14 +367,9 @@ header {
   font-family: var(--font-retro);
   font-size: 1rem;
   color: var(--gray-light);
-  animation: scrollTxt 28s linear infinite;
   text-shadow: 0 0 5px var(--accent);
   white-space: nowrap;
-  padding-left: 100%;
-}
-@keyframes scrollTxt {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  will-change: transform;
 }
 @keyframes scanLine {
   0%   { left: -100%; }
