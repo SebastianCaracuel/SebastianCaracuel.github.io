@@ -168,16 +168,16 @@ document.addEventListener('DOMContentLoaded', () => {
     addPromptLine();
   });
 
-  /* ── TICKER ── */
+/* ── TICKER ── */
   const certData = {
     blueTeam: {
       completed: [
-        { name: 'SAL1',  platform: 'TryHackMe - Security Analyst L1', icon: '🛡️' },
+        { name: 'SAL1',   platform: 'TryHackMe - Security Analyst L1', icon: '🛡️' },
         { name: 'DP-900', platform: 'Azure Data Fundamentals',          icon: '☁️' },
       ],
       inProgress: [
-        { name: 'Security+', platform: 'CompTIA',                            progress: 0,  icon: '🔐' },
-        { name: 'CDSA',      platform: 'Certified Defensive Security Analyst', progress: 0, icon: '🛡️' },
+        { name: 'Security+', platform: 'CompTIA',                             progress: 0,  icon: '🔐' },
+        { name: 'CDSA',      platform: 'Certified Defensive Security Analyst', progress: 0,  icon: '🛡️' },
       ],
     },
     redTeam: {
@@ -187,12 +187,12 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
     },
   };
-
+ 
   function buildBar(progress) {
     const filled = Math.floor(progress / 10);
     return '█'.repeat(filled) + '░'.repeat(10 - filled);
   }
-
+ 
   const broadcastItems = [
     '◥(■_■)◤  BLUE TEAM  ◥(■_■)◤',
     ...certData.blueTeam.completed.map(c =>
@@ -206,17 +206,39 @@ document.addEventListener('DOMContentLoaded', () => {
       `${c.icon} ${c.name} [${c.platform}] ${buildBar(c.progress)} ${c.progress}% PROGRESS`
     ),
   ];
-
-  let currentIndex = 0;
-  const tickerSpan = document.getElementById('tickerText');
-
-  function updateTicker() {
-    if (!tickerSpan) return;
-    tickerSpan.textContent = broadcastItems[currentIndex % broadcastItems.length];
-    currentIndex++;
+ 
+  const tickerSpan  = document.getElementById('tickerText');
+  const tickerTrack = tickerSpan ? tickerSpan.parentElement : null;
+ 
+  if (tickerSpan && tickerTrack) {
+    let idx    = 0;
+    let pos    = 0;
+    const speed = 1.4;
+    let paused  = false;
+ 
+    function loadItem() {
+      tickerSpan.textContent = broadcastItems[idx % broadcastItems.length];
+      idx++;
+      pos = tickerTrack.offsetWidth;
+      tickerSpan.style.transform = `translateX(${pos}px)`;
+    }
+ 
+    function tick() {
+      if (!paused) {
+        pos -= speed;
+        tickerSpan.style.transform = `translateX(${pos}px)`;
+        if (pos + tickerSpan.offsetWidth < 0) {
+          loadItem();
+        }
+      }
+      requestAnimationFrame(tick);
+    }
+ 
+    tickerTrack.addEventListener('mouseenter', () => { paused = true; });
+    tickerTrack.addEventListener('mouseleave', () => { paused = false; });
+ 
+    loadItem();
+    requestAnimationFrame(tick);
   }
-
-  setTimeout(updateTicker, 100);
-  setInterval(updateTicker, 8500);
 
 });
