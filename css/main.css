@@ -322,6 +322,7 @@ header {
 .tl-item:not(:first-child)::before { background:var(--gray-dark); }
 .tl-yr    { font-size:.78rem; color:#7fff7f; letter-spacing:2px; margin-bottom:.3rem; }
 .tl-ttl   { font-family:var(--font-display); font-size:.9rem; color:#fff; margin-bottom:.5rem; }
+.tl-ttlm   { font-family:var(--font-display); font-size:.7rem; color:#fff; margin-bottom:.5rem; }
 .tl-item p { font-size:.91rem; color:#ffffffcc; line-height:1.7; }
 
 
