@@ -309,6 +309,7 @@ header {
 .about-text p:last-child { margin-bottom:0; }
 .hl-a { color:var(--accent); }
 .hl-w { color:#fff; }
+.hl-g { color:#7fff7f; }
 
 /* ── TIMELINE ── */
 .timeline { padding-left:2rem; border-left:2px solid var(--gray-dark); }
@@ -319,9 +320,9 @@ header {
   /* square dots — no border-radius */
 }
 .tl-item:not(:first-child)::before { background:var(--gray-dark); }
-.tl-yr    { font-size:.65rem; color:var(--accent); letter-spacing:2px; margin-bottom:.3rem; }
-.tl-ttl   { font-family:var(--font-display); font-size:.8rem; color:#fff; margin-bottom:.5rem; }
-.tl-item p { font-size:.82rem; color:#8a96a6; line-height:1.7; }
+.tl-yr    { font-size:.78rem; color:#7fff7f; letter-spacing:2px; margin-bottom:.3rem; }
+.tl-ttl   { font-family:var(--font-display); font-size:.9rem; color:#fff; margin-bottom:.5rem; }
+.tl-item p { font-size:.91rem; color:#ffffffcc; line-height:1.7; }
 
 
 /* ── PROJECTS ── */
@@ -331,10 +332,10 @@ header {
   padding:1.4rem; transition:border-color .25s, transform .25s, box-shadow .25s;
 }
 .proj-card:hover { border-color:var(--accent); transform:translateY(-4px); box-shadow:4px 4px 0 var(--accent); }
-.pj-num   { font-family:var(--font-retro); font-size:2.5rem; color:var(--accent); opacity:.3; line-height:1; margin-bottom:.5rem; }
-.pj-title { font-family:var(--font-display); font-size:.78rem; color:#fff; margin-bottom:.5rem; letter-spacing:1px; }
-.pj-desc  { font-size:.78rem; color:#7a8898; line-height:1.65; margin-bottom:.9rem; }
-.pj-tag   { font-size:.6rem; color:var(--accent); letter-spacing:1px; font-family:var(--font-mono); }
+.pj-num   { font-family:var(--font-retro); font-size:2.5rem; color:#7fff7f; opacity:.3; line-height:1; margin-bottom:.5rem; }
+.pj-title { font-family:var(--font-display); font-size:.84rem; color:#fff; margin-bottom:.5rem; letter-spacing:1px; }
+.pj-desc  { font-size:.89rem; color:#ffffffcc; line-height:1.65; margin-bottom:.9rem; }
+.pj-tag   { font-size:.7rem; color:#7fff7f; letter-spacing:1px; font-family:var(--font-mono); }
 
 /* ── SKILLS ── */
 .skills { display:flex; flex-direction:column; gap:1.4rem; }
