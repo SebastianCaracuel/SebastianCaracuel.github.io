@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sebastián Caracuel | Portfolio</title>
+  
+  <title>Sebastián Caracuel | Cybersecurity Portfolio</title>
+  <meta name="description" content="Computer Engineer specializing in cybersecurity — SOC Analyst, SOC Analyst L1, Blue Team, SAP BASIS. Based in Chile." />
+  <meta name="author" content="Sebastián Caracuel" />
+
+  <!--OpenGraph-->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sebastián Caracuel | Cybersecurity Portfolio" />
+  <meta property="og:description" content="Computer Engineer specializing in cybersecurity — SOC Analyst L1, Blue Team, SAP BASIS." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -15,28 +27,28 @@
 
 <body>
 
-  <div class="noise"></div>
+    <div class="noise" aria-hidden="true"></div>
 
-  <div class="corner corner-tl"></div>
-  <div class="corner corner-tr"></div>
-  <div class="corner corner-bl"></div>
-  <div class="corner corner-br"></div>
+  <div class="corner corner-tl" aria-hidden="true"></div>
+  <div class="corner corner-tr" aria-hidden="true"></div>
+  <div class="corner corner-bl" aria-hidden="true"></div>
+  <div class="corner corner-br" aria-hidden="true"></div>
 
-  <!-- System bar-->
-  <div class="sys-bar">
-    <span><span class="status-dot"></span><span class="acc">VERSION_OS</span> v0.1</span>
-    <span id="sysTime"></span>
+   <!-- System bar -->
+  <div class="sys-bar" role="status" aria-live="polite">
+    <span><span class="status-dot" aria-hidden="true"></span><span class="acc">VERSION_OS</span> v0.1</span>
+    <span id="sysTime" aria-label="System time"></span>
     <span>CONN: <span class="acc">ONLINE</span></span>
   </div>
 
-  <!-- ========== HERO ========== -->
+   <!-- HERO -->
   <header>
-    <div class="torn-strip"></div>
+    <div class="torn-strip" aria-hidden="true"></div>
     <div class="bg-text" aria-hidden="true">CARACUEL</div>
 
     <div class="hero-inner container">
 
-      <div class="boot-seq" id="bootSeq">
+       <div class="boot-seq" id="bootSeq" aria-hidden="true">
         <span class="boot-line">INITIALIZING OPERATOR PROFILE...</span>
         <span class="boot-line">BYPASSING FIREWALL... <span class="boot-acc">OK</span></span>
         <span class="boot-line">ENCRYPTING IDENTITY... <span class="boot-acc">OK</span></span>
@@ -50,7 +62,7 @@
           <span class="filled">CARACUEL</span>
         </h1>
         <p class="hero-sub">
-          <span id="typedRole"></span><span class="cursor-blink">█</span>
+          <span id="typedRole"></span><span class="cursor-blink" aria-hidden="true">█</span>
         </p>
         <div class="badges">
           <span class="badge b-acc">● SOC ANALYST L1</span>
@@ -62,53 +74,50 @@
 
     </div>
 
-    <div class="scroll-hint">
+    <div class="scroll-hint" aria-hidden="true">
       <span>SCROLL TO ACCESS</span>
-      <div style="margin-top:.4rem">▼</div>
+      <div class="scroll-arrow">▼</div>
     </div>
   </header>
 
-  <main class="container" style="padding-bottom:5rem">
+  <main class="container main-content">
 
-    <!-- Brodcast // Transmisión -->
-    <div class="ticker reveal">
+    <!-- Broadcast ticker -->
+    <div class="ticker reveal" role="marquee" aria-label="Live broadcast feed">
       <span class="ticker-lbl">// BROADCAST</span>
       <div class="ticker-scroll">
-        <span>COUNTER-SURVEILLANCE ENGAGED ...</span>
+        <span id="tickerText">COUNTER-SURVEILLANCE ENGAGED ...</span>
       </div>
     </div>
 
-    <!-- ABOUT -->
-    <section class="panel reveal">
-      <div class="panel-tag">ABOUT.TXT</div>
+     <!-- ABOUT -->
+    <section class="panel reveal" id="about">
+      <div class="panel-tag" aria-hidden="true">ABOUT.TXT</div>
       <h2 class="sec-title">// About</h2>
       <div class="about-body">
-        <div class="bracket">[</div>
+        <div class="bracket" aria-hidden="true">[</div>
         <div class="about-text">
-          <p>Hey there! I’m <span class="hl-g">Sebastián Caracuel</span> — <span class="hl-a">Computer Engineer</span>.
-          </p>
+          <p>Hey there! I'm <span class="hl-g">Sebastián Caracuel</span> — <span class="hl-a">Computer Engineer</span>.</p>
           <p>I have an insatiable obsession for learning, powered by caffeine. By night, I sharpen my knowledge and
             skills as a dedicated <span class="hl-g">cybersecurity</span> apprentice. I spend my time <span
               class="hl-a">threat hunting</span>, analyzing security events, and documenting security breaches in <span
-              class="hl-w">HackTheBox</span> and <span class="hl-w">TryHackMe</span> labs—my daily training grounds.</p>
+              class="hl-w">HackTheBox</span> and <span class="hl-w">TryHackMe</span> labs — my daily training grounds.</p>
           <p>I firmly believe that to be an elite defender, one must master the <span class="hl-a">"attacker
-              mindset."</span> When I'm not analyzing alerts, I'm conducting <span class="hl-w">ethical hacking</span>.
-          </p>
-
+              mindset."</span> When I'm not analyzing alerts, I'm conducting <span class="hl-w">ethical hacking</span>.</p>
         </div>
-        <div class="bracket">]</div>
+        <div class="bracket" aria-hidden="true">]</div>
       </div>
     </section>
 
-    <div class="divider reveal">
+    <div class="divider reveal" aria-hidden="true">
       <div class="divider-line"></div>
       <span class="divider-txt">EXPERIENCE</span>
       <div class="divider-line"></div>
     </div>
 
-    <!-- TIMELINE -->
-    <section class="panel reveal">
-      <div class="panel-tag">WORK_LOG.TXT</div>
+<!-- WORK EXPERIENCE -->
+    <section class="panel reveal" id="experience">
+      <div class="panel-tag" aria-hidden="true">WORK_LOG.TXT</div>
       <h2 class="sec-title">// Work Experience</h2>
       <div class="timeline">
         <div class="tl-item">
@@ -122,11 +131,9 @@
               class="hl-a">Twilio</span>, integrating a <span class="hl-w">bot</span> that makes emergency phone calls
             to the <span class="hl-g">on-duty consultant</span> during system downtime, mitigating costs and production
             inoperability.</p>
-
-
         </div>
         <div class="tl-item">
-          <div class="tl-yr">ABR 2024</div>
+          <div class="tl-yr">APR 2024</div>
           <div class="tl-ttl">SAP BASIS Trainee</div>
           <div class="tl-ttlm">Seidor, Santiago</div>
           <p>Management of the <span class="hl-a">SAP Landscape</span> in <span class="hl-w">S/4HANA</span> and SAP R/3
@@ -134,165 +141,191 @@
             Served as the technical <span class="hl-a">focal point</span> for clients, successfully resolving over <span
               class="hl-g">900 annual requests</span> and ensuring operational continuity through preventive
             optimizations with <span class="hl-w">EarlyWatch Alerts</span>.</p>
-
         </div>
       </div>
     </section>
 
-    <div class="divider reveal">
+    <div class="divider reveal" aria-hidden="true">
       <div class="divider-line"></div>
       <span class="divider-txt">PROJECTS</span>
       <div class="divider-line"></div>
     </div>
 
-    <!-- PROJECTS -->
-    <section class="panel reveal">
-      <div class="panel-tag">PROJECTS.SH</div>
+ <!-- PROJECTS -->
+    <section class="panel reveal" id="projects">
+      <div class="panel-tag" aria-hidden="true">PROJECTS.SH</div>
       <h2 class="sec-title">// Projects</h2>
       <div class="proj-grid">
         <div class="proj-card">
-          <div class="pj-num">01</div>
+          <div class="pj-num" aria-hidden="true">01</div>
           <div class="pj-title">Portfolio</div>
-          <div class="pj-desc">Este sitio — registro vivo de habilidades, proyectos y progreso continuo.</div>
+          <div class="pj-desc">This site — a living record of skills, projects, and ongoing progress.</div>
           <div class="pj-tag">● YOU ARE HERE</div>
         </div>
         <div class="proj-card">
-          <div class="pj-num">02</div>
-          <div class="pj-title">Home SOC Lab</div>
-          <div class="pj-desc">Entorno personal de operaciones de seguridad para práctica hands-on de detección y
-            monitoreo.</div>
-          <div class="pj-tag">● ACTIVE</div>
+          <div class="pj-num" aria-hidden="true">02</div>
+          <div class="pj-title">HTB / TryHackMe Writeups</div>
+          <div class="pj-desc">Under construction — first write-ups are on the way.</div>
+          <div class="pj-tag pj-tag--soon">● COMING SOON</div>
         </div>
         <div class="proj-card">
-          <div class="pj-num">03</div>
-          <div class="pj-title">Detection Rules</div>
-          <div class="pj-desc">Reglas SIEM personalizadas y firmas Sigma para cobertura de patrones de ataque reales.
-          </div>
-          <div class="pj-tag">● ACTIVE</div>
+          <div class="pj-num" aria-hidden="true">03</div>
+          <div class="pj-title">SAP BASIS</div>
+          <div class="pj-desc">Step-by-Step Technical Instructions.</div>
+          <div class="pj-tag pj-tag--soon">● COMING SOON</div>
         </div>
         <div class="proj-card">
-          <div class="pj-num">04</div>
-          <div class="pj-title">Threat Hunting</div>
-          <div class="pj-desc">Ejercicios proactivos contra APTs, movimiento lateral y mecanismos de persistencia.</div>
-          <div class="pj-tag">● ONGOING</div>
+          <div class="pj-num" aria-hidden="true">04</div>
+          <div class="pj-title">Home SOC LAB</div>
+          <div class="pj-desc">Personal practice environment — virtualization, open-source SIEM, and traffic analysis. First write-ups on the way.</div>
+          <div class="pj-tag pj-tag--soon">● COMING SOON</div>
         </div>
       </div>
     </section>
 
-    <div class="divider reveal">
+    <div class="divider reveal" aria-hidden="true">
       <div class="divider-line"></div>
       <span class="divider-txt">SKILLS</span>
       <div class="divider-line"></div>
     </div>
 
-    <!-- SKILLS -->
-    <section class="panel reveal">
-      <div class="panel-tag">SKILL_MATRIX.DAT</div>
+   <!-- SKILLS -->
+    <section class="panel reveal" id="skills">
+      <div class="panel-tag" aria-hidden="true">SKILL_MATRIX.DAT</div>
       <h2 class="sec-title">// Skill Matrix</h2>
       <div class="skills">
-        <div class="skill-item" data-lv="85">
+        <div class="skill-item" data-lv="55">
           <div class="skill-hdr">
-            <span class="skill-nm"><span class="sk-num">[01]</span> SIEM</span>
-            <span class="skill-pc">85%</span>
+            <span class="skill-nm"><span class="sk-num" aria-hidden="true">[01]</span> Network Analysis</span>
+            <span class="skill-pc">55%</span>
           </div>
-          <div class="bar-wrap">
+          <div class="bar-wrap" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" aria-label="Network Analysis: 55%">
             <div class="bar-fill"></div>
           </div>
-          <div class="skill-tg">Splunk · QRadar · Elastic</div>
-        </div>
-        <div class="skill-item" data-lv="80">
-          <div class="skill-hdr">
-            <span class="skill-nm"><span class="sk-num">[02]</span> Threat Detection</span>
-            <span class="skill-pc">80%</span>
-          </div>
-          <div class="bar-wrap">
-            <div class="bar-fill"></div>
-          </div>
-          <div class="skill-tg">MITRE ATT&amp;CK · IOC · TTP Mapping</div>
-        </div>
-        <div class="skill-item" data-lv="75">
-          <div class="skill-hdr">
-            <span class="skill-nm"><span class="sk-num">[03]</span> Incident Response</span>
-            <span class="skill-pc">75%</span>
-          </div>
-          <div class="bar-wrap">
-            <div class="bar-fill"></div>
-          </div>
-          <div class="skill-tg">Triage · Containment · Forensics</div>
+          <div class="skill-tg">Wireshark · Snort · Zeek</div>
         </div>
         <div class="skill-item" data-lv="70">
           <div class="skill-hdr">
-            <span class="skill-nm"><span class="sk-num">[04]</span> Python</span>
+            <span class="skill-nm"><span class="sk-num" aria-hidden="true">[02]</span> Endpoint Security</span>
             <span class="skill-pc">70%</span>
           </div>
-          <div class="bar-wrap">
+          <div class="bar-wrap" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Endpoint Security: 70%">
             <div class="bar-fill"></div>
           </div>
-          <div class="skill-tg">Automation · Scripts · Parsing</div>
+          <div class="skill-tg">Sysmon · Event Logs · EDR</div>
         </div>
-        <div class="skill-item" data-lv="78">
+        <div class="skill-item" data-lv="85">
           <div class="skill-hdr">
-            <span class="skill-nm"><span class="sk-num">[05]</span> SAP BASIS</span>
-            <span class="skill-pc">78%</span>
+            <span class="skill-nm"><span class="sk-num" aria-hidden="true">[03]</span> Phishing Analysis</span>
+            <span class="skill-pc">85%</span>
           </div>
-          <div class="bar-wrap">
+          <div class="bar-wrap" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Phishing Analysis: 85%">
             <div class="bar-fill"></div>
           </div>
-          <div class="skill-tg">S/4HANA · Cloud ALM · EarlyWatch</div>
+          <div class="skill-tg">Email Headers · OSINT · Sandboxing</div>
+        </div>
+        <div class="skill-item" data-lv="67">
+          <div class="skill-hdr">
+            <span class="skill-nm"><span class="sk-num" aria-hidden="true">[04]</span> Vuln Assessment</span>
+            <span class="skill-pc">67%</span>
+          </div>
+          <div class="bar-wrap" role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" aria-label="Vulnerability Assessment: 67%">
+            <div class="bar-fill"></div>
+          </div>
+          <div class="skill-tg">Nmap · Nessus · CVE Mapping</div>
+        </div>
+        <div class="skill-item" data-lv="45">
+          <div class="skill-hdr">
+            <span class="skill-nm"><span class="sk-num" aria-hidden="true">[05]</span> Web App Security</span>
+            <span class="skill-pc">45%</span>
+          </div>
+          <div class="bar-wrap" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" aria-label="Web App Security: 45%">
+            <div class="bar-fill"></div>
+          </div>
+          <div class="skill-tg">Burp Suite · OWASP Top 10 · Injection</div>
+        </div>
+        <div class="skill-item" data-lv="58">
+          <div class="skill-hdr">
+            <span class="skill-nm"><span class="sk-num" aria-hidden="true">[06]</span> Digital Forensics</span>
+            <span class="skill-pc">58%</span>
+          </div>
+          <div class="bar-wrap" role="progressbar" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100" aria-label="Digital Forensics: 58%">
+            <div class="bar-fill"></div>
+          </div>
+          <div class="skill-tg">Autopsy · Volatility · Disk Imaging</div>
+        </div>
+        <div class="skill-item" data-lv="90">
+          <div class="skill-hdr">
+            <span class="skill-nm"><span class="sk-num" aria-hidden="true">[07]</span> Security Foundations</span>
+            <span class="skill-pc">90%</span>
+          </div>
+          <div class="bar-wrap" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Security Foundations: 90%">
+            <div class="bar-fill"></div>
+          </div>
+          <div class="skill-tg">CIA Triad · IAM · Cryptography</div>
         </div>
       </div>
     </section>
 
-    <!-- CERTS -->
-    <section class="panel reveal">
-      <div class="panel-tag">CERTS.LOG</div>
+   <!-- CERTIFICATIONS -->
+    <section class="panel reveal" id="certs">
+      <div class="panel-tag" aria-hidden="true">CERTS.LOG</div>
       <h2 class="sec-title">// Certifications</h2>
       <div class="cert-list">
-        <div class="cert c-active">
-          <div class="cert-st">● IN PROGRESS</div>
-          <div class="cert-nm">SAL1</div>
-          <div class="cert-bd">Security Analytics — SOC Level 1</div>
-          <div class="cert-bar">
-            <div class="cert-prog" style="width:60%"></div>
-          </div>
-        </div>
+
         <div class="cert c-done">
           <div class="cert-st">✓ COMPLETED</div>
-          <div class="cert-nm">Security Awareness</div>
-          <div class="cert-bd">Defensive Security Training</div>
+          <div class="cert-nm">SAL1</div>
+          <div class="cert-bd">Security Analyst Level 1 — TryHackMe</div>
         </div>
+
+        <div class="cert c-active">
+          <div class="cert-st">● IN PROGRESS</div>
+          <div class="cert-nm">CJCA</div>
+          <div class="cert-bd">Certified Junior Cybersecurity Analyst — HackTheBox</div>
+          <div class="cert-bar">
+            <div class="cert-prog cert-prog--75"></div>
+          </div>
+        </div>
+
         <div class="cert c-queue">
           <div class="cert-st">◌ QUEUED</div>
-          <div class="cert-nm">Future Certifications</div>
-          <div class="cert-bd">Expansión continua de conocimientos</div>
+          <div class="cert-nm">CompTIA Security+</div>
+          <div class="cert-bd">Core cybersecurity certification — CompTIA</div>
         </div>
+
+        <div class="cert c-queue">
+          <div class="cert-st">◌ QUEUED</div>
+          <div class="cert-nm">CDSA</div>
+          <div class="cert-bd">Certified Defensive Security Analyst — HackTheBox</div>
+        </div>
+
       </div>
     </section>
 
-    <!-- TERMINAL -->
-    <section class="panel reveal">
-      <div class="panel-tag">TERMINAL.EXE</div>
+ <!-- TERMINAL -->
+    <section class="panel reveal" id="terminal">
+      <div class="panel-tag" aria-hidden="true">TERMINAL.EXE</div>
       <h2 class="sec-title">// Interactive Terminal</h2>
       <div class="terminal">
-        <div class="term-out" id="termOut">
+        <div class="term-out" id="termOut" aria-live="polite" aria-label="Terminal output">
           <div class="tl"><span class="tp">operator@local:~$</span> <span class="tc">help</span></div>
-          <div class="tl tr">Commands: <span style="color:var(--accent)">about · skills · projects · certs · contact ·
-              whoami · clear</span></div>
-          <div class="tl"><span class="tp">operator@local:~$</span> <span class="cursor-blink">█</span></div>
+          <div class="tl tr">Commands: <span class="term-cmd-list">about · skills · projects · certs · contact · whoami · clear</span></div>
+          <div class="tl"><span class="tp">operator@local:~$</span> <span class="cursor-blink" aria-hidden="true">█</span></div>
         </div>
         <div class="term-inp-row">
-          <span class="tp">operator@local:~$</span>
-          <input type="text" id="termInput" class="term-inp" placeholder="type a command..." autocomplete="off"
-            spellcheck="false" />
+          <label for="termInput" class="tp" aria-label="Terminal input">operator@local:~$</label>
+          <input type="text" id="termInput" class="term-inp" placeholder="type a command..."
+            autocomplete="off" spellcheck="false" aria-label="Terminal command input" />
         </div>
       </div>
     </section>
 
   </main>
 
-  <footer>
+    <footer>
     <div class="container">
-      <div class="ft-line"></div>
+      <div class="ft-line" aria-hidden="true"></div>
       <div class="ft-content">
         <span>SEBASTIÁN CARACUEL</span>
         <span class="ft-acc">● SYSTEM ONLINE · 2026</span>
