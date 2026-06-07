@@ -86,33 +86,6 @@ body::after {
 }
 @keyframes dotPulse { 50%{opacity:0} }
 
-/* ── FAKE WINDOWS ERROR ── */
-.win-error {
-  position:fixed; top:90px; right:28px;
-  background:var(--paper); border:2px solid var(--ink);
-  box-shadow:4px 4px 0 var(--ink);
-  font-family:var(--font-retro); font-size:.95rem;
-  color:var(--ink); z-index:600; width:240px;
-  animation:errorWobble .15s ease-in-out 3;
-  cursor:pointer;
-}
-.win-error .win-bar {
-  background:var(--ink); color:var(--paper);
-  padding:2px 8px; display:flex;
-  justify-content:space-between; align-items:center;
-  font-size:.8rem; letter-spacing:1px;
-}
-.win-error .win-body { padding:10px 12px; line-height:1.6; }
-.win-error .win-btn {
-  display:block; margin:8px auto 0;
-  background:var(--paper); border:2px solid var(--ink);
-  padding:2px 20px; cursor:pointer; font-family:var(--font-retro);
-  font-size:.95rem; color:var(--ink);
-}
-.win-error .win-btn:hover { background:var(--ink); color:var(--paper); }
-@keyframes errorWobble {
-  0%,100%{transform:translate(0,0)} 25%{transform:translate(-2px,1px)} 75%{transform:translate(2px,-1px)}
-}
 
 /* ── CONTAINER ── */
 .container { width:min(1080px,90%); margin:0 auto; }
