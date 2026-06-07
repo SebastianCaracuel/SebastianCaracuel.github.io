@@ -5,13 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const tick = () => cl.textContent = new Date().toLocaleTimeString('en-CL') + ' UTC';
   tick(); setInterval(tick, 1000);
 
-  /* Dismiss error popup */
-  window.dismissErr = () => {
-    const w = document.getElementById('winError');
-    if (w) w.style.display = 'none';
-  };
-  document.getElementById('closeErr').addEventListener('click', dismissErr);
-  setTimeout(dismissErr, 8000);
 
   /* Boot sequence */
   const bootSeq = document.getElementById('bootSeq');
